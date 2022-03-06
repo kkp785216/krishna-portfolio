@@ -1,0 +1,412 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root{
+    --primary: #121212;
+    --secondary: #FF0066;
+}
+
+.container{
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 15px;
+}
+
+/* Header Styling */
+header{
+    padding: 15px 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo{
+    width: 170px;
+    padding: 10px;
+}
+#logo img{
+    width: 100%;
+}
+#menus{
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+}
+.menu ul{
+    display: flex;
+    align-items: center;
+}
+.menu ul li:last-child a{
+    padding-right: 0;
+}
+#contact ul{
+    flex-wrap: wrap;
+}
+.menu li a{
+    padding: 15px;
+    color: var(--primary);
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+}
+.menu li a:hover{
+    color: var(--secondary);
+}
+#contact{
+    margin-right: -15px;
+}
+/* Mobile Menu */
+#mobMenus{
+    display: none;
+}
+img#menuOpen{
+    width: 62px;
+    padding: 7px;
+}
+.mobMenu{
+    position: fixed;
+    width: 270px;
+    left: -270px;
+    top: 0;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow-y: auto;
+    background-color: white;
+    z-index: 10;
+    transition: all .1s linear;
+}
+.mobMenu.active{
+    left: 0;
+}
+.mobMenu img#menuClose{
+    display: block;
+    width: 47px;
+    padding: 7px;
+    margin-left: auto;
+    margin-bottom: 17px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.mobMenu ul{
+    margin-bottom: 43px;
+}
+.mobMenu ul:last-child{
+    margin-bottom: 0;
+}
+.mobMenu li a {
+    display: block;
+    padding: 9px 15px;
+    color: var(--primary);
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+}
+.mobMenu li a:hover{
+    color: var(--secondary);
+}
+#menuOverlay.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #0000004d;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+
+/* Profile Styling */
+#main{
+    background-color: #f1f1f1;
+}
+#profile{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+#profile::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    margin-left: auto;
+    top: 0;
+    right: 0;
+    background-image: url(../img/me.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    transition: .5s;
+}
+.can-make{
+    display: flex;
+    position: relative;
+    width: 70%;
+    flex-wrap: wrap;
+}
+.can-make ul{
+    display: flex;
+    color: var(--secondary);
+}
+.can-make span{
+    font-size: 5rem;
+    font-weight: 900;
+    white-space: nowrap;
+}
+.hire{
+    margin-top: 3rem;
+    position: relative;
+    width: 70%;
+}
+.hire .btn{
+    margin-right: .85rem;
+    cursor: pointer;
+}
+.hire .btn:last-child{
+    margin-right: 0;
+}
+
+/* Service Styling */
+
+/* Project Styling */
+#projects .projectThumb{
+    margin: -20px -14px;
+    margin-bottom: 20px;
+}
+#projects .projectThumb img{
+    width: 100%;
+    display: block;
+}
+#projects .apps{
+    grid-template-columns: repeat( auto-fit, minmax(309px, 1fr) );
+}
+#projects .app{
+    background-color: #f1f1f1;
+}
+
+/* About Styling */
+#about .aboutMe{
+    width: 200px;
+    border-radius: 50%;
+    height: 200px;
+    overflow: hidden;
+    margin: 13px auto;
+}
+#about img{
+    width: 100%;
+}
+#about span{
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    margin-top: 11px;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+#about p{
+    text-align: center;
+    color: grey;
+    margin-top: 11px;
+}
+#about ul{
+    width: 75%;
+    margin: auto;
+    margin-top: 33px;
+    color: grey;
+    line-height: 22px;
+}
+#about li{
+    margin-bottom: 13px;
+}
+
+/* Contact Us */
+.contactusBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    margin: 11px;
+}
+.social{
+    width: 33px;
+    background: black;
+    padding: 7px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.social img{
+    width: 100%;
+    display: block;
+    filter: invert(1);
+}
+
+/* Utility */
+.section{
+    margin: 48px auto;
+}
+.section:last-child{
+    margin-bottom: 0 !important;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.btn{
+    font-weight: 900;
+    border: 2px solid var(--secondary);
+    padding: 19px 53px;
+    border-radius: 3px;
+    transition: .3s;
+}
+.btn.active, .btn:hover{
+    background: var(--secondary);
+    color: white;
+}
+h2.heading{
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+p.heading{
+    padding: 15px;
+    border: 2px solid var(--secondary);
+    text-align: center;
+    margin-top: 17px;
+    margin-bottom: 33px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling Apps */
+.apps{
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(210px, 1fr) );
+    grid-gap: 21px;
+}
+.app{
+    box-shadow: 0px 0px 33px 0px #0000000d;
+    padding: 20px 14px;
+    border-radius: 13px;
+    transition: .3s;
+    overflow: hidden;
+}
+.app:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 33px 0px #00000029;
+}
+.app .appThumb{
+    width: 150px;
+    margin: auto;
+}
+.app .appThumb img{
+    width:  100%;
+    display: block;
+    margin: auto;
+}
+.app span.appTitle{
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    margin-top: 11px;
+}
+.app p{
+    text-align: center;
+    color: grey;
+    margin-top: 13px;
+}
+
+
+/* Let's Make it responsive */
+@media (max-width: 1000px){
+    #contact ul{
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 840px){
+    #contact{
+        display: none;
+    }
+    nav #menus{
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 767px){
+    #profile {
+        align-items: center;
+    }
+    #profile::before{
+        width: 100%;
+        opacity: .5;
+    }
+    #menu{
+        display: none;
+    }
+    #logo {
+        width: 222px;
+    }
+    #mobMenus{
+        display: block;
+    }
+    .can-make {
+        justify-content: center;
+    }
+    .can-make span {
+        font-size: 3.5rem;
+    }
+    .hire {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .btn{
+        padding: 13px 35px;
+    }
+}
+
+@media(max-width:332px){
+    .hire .btn{
+        flex-direction: column;
+        margin: 5px;
+    }
+    #projects .apps {
+        grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    }
+    #logo {
+        width: 180px;
+    }
+    img#menuOpen {
+        width: 52px;
+        padding: 5px;
+    }
+}
