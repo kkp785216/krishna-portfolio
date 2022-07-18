@@ -49,21 +49,3 @@ function iterator(element) {
         }
     }
 }
-
-// Itrate the website text
-let websiteItrate = iterator(canMake.children);
-let websiteItrateValue;
-let nextTime = 1;
-
-function Update() {
-    websiteItrateValue = websiteItrate.next().value;
-    if (websiteItrateValue !== undefined) {
-        websiteItrateValue.style.opacity = 1;
-    }
-    else {
-        Array.from(canMake.children).forEach((element) => {
-            element.style.opacity = 0;
-        });
-    }
-}
-setInterval(()=>{Update()}, 150);
