@@ -251,6 +251,10 @@ img#menuOpen {
 }
 .project .project-content h3{
     padding-bottom: 17px;
+    color: #0969da;
+}
+.project .project-content h3:hover{
+    text-decoration: underline;
 }
 .project .project-content p{
     margin-bottom: 17px;
@@ -399,6 +403,7 @@ p.heading {
     font-family: "Segoe UI", Arial, Helvetica, sans-serif;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .app {
@@ -519,6 +524,9 @@ p.heading {
     }
     .project:nth-child(even) >*:last-child {
         order: unset;
+    }
+    #about ul {
+        width: 100%;
     }
 }
 
